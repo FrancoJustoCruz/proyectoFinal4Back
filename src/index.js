@@ -73,7 +73,7 @@ io.on('connection', (socket) => {
 
     socket.on('mensaje', (data) => {
         console.log('Mensaje recibido:', data);
-        io.emit('mensaje', data); // Envía el mensaje a todos los clientes conectados
+        io.emit('mensaje', data); 
     });
 });
 

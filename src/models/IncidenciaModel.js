@@ -43,14 +43,14 @@ const Incidencia = db.define('incidencia', {
         }
     },
     imagen: {
-        type: DataTypes.STRING, // Ajusta el tipo de datos según tus necesidades (STRING, TEXT, etc.)
-        allowNull: true // Puede ser nullable si no todos los registros tienen imagen
+        type: DataTypes.STRING, 
+        allowNull: true 
     }
 }, {
     freezeTableName: true
 });
 
-// Relaciones con otros modelos
+
 User.hasMany(Incidencia, { foreignKey: 'userId' });
 Incidencia.belongsTo(User, { foreignKey: 'userId' });
 

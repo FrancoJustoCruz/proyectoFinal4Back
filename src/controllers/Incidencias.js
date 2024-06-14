@@ -10,7 +10,7 @@ export const getIncidencias = async (req, res) => {
         let response;
         if (req.role === 'admin') {
             response = await Incidencia.findAll({
-                attributes: ['uuid', 'categoriaId', 'descripcion', 'estado', 'imagen'], // Incluye 'imagen' aquí si necesitas la información de la imagen
+                attributes: ['uuid', 'categoriaId', 'descripcion', 'estado', 'imagen'], 
                 include: [
                     {
                         model: User,
